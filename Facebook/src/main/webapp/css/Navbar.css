@@ -1,0 +1,296 @@
+@charset "UTF-8";
+*::after{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    color: white;
+  }
+  
+  .ull a:hover{
+  background: none !important;
+  opacity: rgba(0,0,0,0.7) !important;
+  }
+  .nav1 {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between; 
+    align-items: left; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative; 
+  }
+  .logo {
+    width:400px;
+    display: flex;
+    flex-direction:row;
+    margin-left: 10px;
+    margin-top:12px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  li {
+    display: inline-block;
+  }
+  .navbar1{
+  display:flex;
+  float:left;
+  padding-top:10px;
+  }
+  .navbar1.active{
+  color:black !important;
+  }
+  .navbar li{
+    margin-top:2px;
+  }
+  .navbar1 li a {
+    display:flex; 
+    color: white;
+    text-align: center;
+    padding: 27px 34px ;
+    text-decoration: none;
+    
+  }
+  .logo-right  li a {
+    display: inline-block; 
+    color: white;
+    text-align: center;
+    padding: 8px 13px;
+    text-decoration: none;
+    
+  }
+
+  .logo-right li{
+  background-color:#f0f0f0;
+  border-radius:50%;
+  margin:5px;
+  }
+   .logo-right  li:last-child{
+    display: inline-block; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 45px; 
+	height: 45px; 
+	border-radius: 50%; 
+   
+   } 
+
+   
+   .logo-right li img{
+    width: 40px; 
+	height: 40px; 
+	object-fit: cover; 
+	border-radius: 50%; 
+	transform: translate(-11px, -6.5px);
+	}
+
+  .ull{
+    list-style-type: initial;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: inline-flex;
+    width: 100%;
+  }
+
+  p{
+     margin-right: 10px;
+     color: rgb(18, 103, 251);
+     font-size: larger;
+     font-weight: bold;
+  }
+  .logo-right{
+  margin-right:15px;
+  }
+.dropdown-menu {
+  align-items: flex-start; /* Align items to the start (left) */
+  text-align: left; /* Text alignment to the left */
+  justify-content: left; /* Justify content to the left */
+  display: none;
+  width: 300px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transform: translate(-80%,-2%);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+.cont i {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 8px;
+    }
+    .cont span {
+      height: 30px;
+      box-shadow: 0 4px 2px -2px #7e7b7b;
+      width: 90%;
+      margin-left:10px;
+      padding-bottom: 45px;
+    }
+    .cont  span a {
+      font-size: medium;
+    }
+    .cont  span a:hover{
+      color : #0866ff !important;
+    }
+    .cont a{
+      text-align: left !important;
+      margin: 0%;
+    }
+    .cont a:hover{
+      background-color: transparent !important;
+      margin: 0%;
+    }
+    .cont {
+      margin-left: 5%;
+      width: 90%;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      min-height: 50px;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .icons {
+      margin-top: 5px;
+      display: flex;
+      align-items: flex-start; /* Align items to the start (left) */
+      text-align: left; /* Text alignment to the left */
+      justify-content: left;
+      flex-direction: column;
+    }
+    .icons i {
+      margin-right: 10px;
+    }
+    .icons a {
+      margin-left: 10px;
+    }
+
+.color{
+	color: #0866FF !important;
+}
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+   --first-color: hsl(222, 80%, 58%);
+  --dark-color: hsl(222, 24%, 8%);
+  --title-color: hsl(222, 8%, 8%);
+  --text-color-light: hsl(222, 8%, 65%);
+  --white-color: #fff;
+  --body-color: hsl(222, 100%, 99%);
+  --body-font: "Poppins", sans-serif;
+  --small-font-size: .813rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --small-font-size: .875rem;
+  }
+}
+.container {
+  margin-inline: 1.5rem;
+}
+
+.search {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #9ec3ff;
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+  border-radius: 4rem;
+  padding: 2px 0px 2px 5px !important;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+.search__input {
+  border: none;
+  outline: none;
+  background-color: #9ec3ff;
+  width: calc(100% - 44px);
+  height: 100%;
+  border-radius: 4rem;
+  padding-left: 10px;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s;
+}
+.search__input:-webkit-autofill {
+  box-shadow: 0 0 0 100px var(--white-color) inset;
+}
+.search__button {
+  width: 25px;
+  height: 25px;
+  background-color: #0866ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2.5px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+.search__icon, .search__close {
+  color: var(--white-color);
+  font-size: 1rem;
+  position: absolute;
+  transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+.search__close {
+  opacity: 0;
+}
+
+.show-search {
+  width: 100%;
+}
+.show-search .search__input {
+ background-color: #9ec3ff;
+  opacity: 1;
+  pointer-events: initial;
+}
+.show-search .search__button {
+  transform: rotate(90deg);
+}
+.show-search .search__icon {
+  opacity: 0;
+}
+.show-search .search__close {
+  opacity: 1;
+}
+@media screen and (min-width: 300px) {
+  .show-search {
+    width: 250px;
+  }
+}  
