@@ -138,7 +138,7 @@ if(user != null){
       <a href="#" class="bell-icon-container">
       <i class="fa-solid fa-bell fa-lg" style="color: #0866FF;"></i>
       </a>
-      <div class="dropdown-menu" id="bell-dropdown" style="display:none; display:flex; justify-content:center;">
+      <div class="dropdown-menu" id="bell-dropdown" style="display:none; justify-content:center; transform:translate(-62%,17%);">
                <div class="notification">
         <p class="message">John Deo sent you a friend request</p>
         <div class="buttons">

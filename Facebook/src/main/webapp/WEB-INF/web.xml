@@ -126,6 +126,7 @@
     <servlet-name>Uploadprofileimage</servlet-name>
     <url-pattern>/Uploadprofileimage</url-pattern>
   </servlet-mapping>
+
   <display-name>Facebook</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
