@@ -100,7 +100,7 @@
     <description></description>
     <display-name>UploadImage</display-name>
     <servlet-name>UploadImage</servlet-name>
-    <servlet-class>com.upload.UploadImage</servlet-class>
+    <servlet-class>upload.UploadImage</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UploadImage</servlet-name>

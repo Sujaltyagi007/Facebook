@@ -148,14 +148,18 @@ if(user != null){
     </div>
       </div>
      </li>
-       
+      <%if(user.getUimg()!=null){ %>
       <li>
       <a href="#" class="user-image-container">
-         <img src="Userimages/<%out.print(user.getUimg());%>" alt="User Image">
+         <img src="Userimages/<%out.print(user.getUimg());%>" alt="User">
       </a>
       <div class="dropdown-menu" id="user-dropdown">
          <div class="cont">
-            <span><a href="Profile.jsp"><img src="Userimages/<%out.print(user.getUimg());%>" style="width:30px; height:30px; border-radius:50%;"><%out.print(user.getUname());%></a></span>
+            <span>
+            	<a href="Profile.jsp">
+            		<img src="Userimages/<%out.print(user.getUimg());%>" style="width:30px; height:30px; border-radius:50%;"><%out.print(user.getUname());%>
+            	</a>
+            </span>
             <a href="">See all profiles</a>
          </div>
          <div class="icons">
@@ -167,6 +171,39 @@ if(user != null){
           </div>
            </div>
          </li>
+      <%}else{ %>
+      <li>
+      <a href="#" class="user-image-container">
+         <i class="fa-solid fa-user fa-lg" style="color: #0866FF; "></i>
+      </a>
+      <div class="dropdown-menu" id="user-dropdown" style="transform:translate(-80%,3%);">
+         <div class="cont">
+            <span>
+             <%if(user.getUimg()!=null){ %>
+            	<a href="Profile.jsp">
+            		<img src="Userimages/<%out.print(user.getUimg());%>" style="width:30px; height:30px; margin:5px 0px 0px 2px; border-radius:50%; " alt="user">
+            		<%out.print(user.getUname());%>
+            	</a>
+            <%}else{ %>
+             	<a href="Profile.jsp">
+            		<i class="fa-solid fa-user fa-xl" style="color: black; width:20px; height:30px; border-radius:50%;"></i>
+            		<%out.print(user.getUname());%>
+            	</a>
+            <%}%>
+            </span>
+            <a href="">See all profiles</a>
+         </div>
+         <div class="icons">
+               <a href="#"><i class="fa-solid fa-gear fa-xl"></i>Setting & privacy</a>
+               <a href="#"><i class="fa-solid fa-circle-question fa-xl"></i>Help & Support</a>
+               <a href="#"><i class="fa-solid fa-moon fa-xl"></i>Display & accessibility</a>
+               <a href="#"><i class="fa-solid fa-comment-dollar fa-xl"></i>Give feedback</a>
+               <a href="Logout"><i class="fa-solid fa-right-from-bracket fa-xl"></i>Log Out</a>
+          </div>
+           </div>
+         </li>
+      <%} %>
+      
     </ul>
   </div>
 </nav>

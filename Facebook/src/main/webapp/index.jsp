@@ -13,6 +13,42 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/Slider1.css">
 <script src="Slider.js"></script>
+<style>
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+.hover-half {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;  
+    padding-right: 20px; 
+    transform: translateY(150%);
+    transition: transform 0.4s ease;
+    color: white;
+}
+.card:hover .hover-half {
+    transform: translateY(0); 
+}
+.card:hover .img img{
+	background-color: rgba(0, 0, 0, 0.6); 
+}
+.img img {
+    width: 100%;
+    height: auto;
+}
+.hover-half i {
+    font-size: 2rem; /* Adjust the size of the icon */
+    color: white;
+}
+</style>
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
@@ -22,7 +58,17 @@ if(user!=null){ %>
  <div class="row align-items-start">
    <div class="col-3">
      <div class="sidenav" id="sidenav">
-       <a href="Profile.jsp"><i><img src="Userimages/<%out.print(user.getUimg());%>" style="width:28px; border-radius:50%; height:30px; margin-top:5px; margin-bottom:3px; margin-left:-5px; "></i><%out.print(user.getUname()); %></a>
+       <%if(user.getUimg()!=null){ %>
+       <a href="Profile.jsp">
+       		<i><img src="Userimages/<%out.print(user.getUimg());%>" style="width:28px; border-radius:50%; height:30px; margin-top:5px; margin-bottom:3px; margin-left:-5px; "></i>
+       			<%out.print(user.getUname()); %>
+       	</a>
+       <%}else{ %>
+       <a href="Profile.jsp">
+       		<i class="fa-solid fa-user" style="margin-left:15px;"></i>
+       			<%out.print(user.getUname()); %>
+       </a>
+       <%} %>
        <a href="#"><i class="fa-solid fa-user-group"></i>Friends</a>
        <a href="#"><i class="fa-solid fa-clock"></i>Memories</a>
        <a href="#"><i class="fa-solid fa-bookmark"></i>Saved</a>
@@ -36,24 +82,23 @@ if(user!=null){ %>
        <a href="#"><i class="fa-solid fa-caret-down"></i>See More</a>
      </div>
    </div>
-   <div class="col-6 scrollable" >
-   
+   <div class="col-6 scrollable">
     <div class="wrapper"> 
 	<i id="left" class="fa-solid fas fa-angle-left"></i> 
 	<ul class="carousel"> 
-		<li class="card" style="background-image: url(Userimages/<%out.print(user.getUimg()); %>); background-size: 180px;
-  background-position: center; " > 
-			<div class="img"><img src="Userimages/<%out.print(user.getUimg()); %>"
-			alt="" draggable="false"> </div> 
-			<h2 style="color: white;  text-align:center;"> 
-				<%out.print(user.getUname()); %> 
-			</h2>
-		</li> 
+		<li class="card" style="background-image: url(Userimages/<%out.print(user.getUimg()); %>); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+		   <div class="img">
+		       <img src="Userimages/<%out.print(user.getUimg()); %>" alt="" draggable="false">
+		   </div>
+		   <h2 style="color: white; text-align: center;">
+		       <% out.print(user.getUname()); %>
+		   </h2>
+		    <div class="hover-half"><i class="fa-solid fa-plus" style="transform: translate(65px,-50px);"></i></div>
+		</li>
 		<%for(int i=0;i<8;i++){ %>
-		<li class="card" style="background-image: url(Userimages/<%out.print(user.getUimg()); %>); background-size: 180px;
-  background-position: center; " > 
-		<div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png"
-		alt="" draggable="false"> </div> 
+		<li class="card" style="background-image: url(Userimages/<%out.print(user.getUimg()); %>); background-size: cover;
+           background-position: center; " > 
+		<div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="" draggable="false"></div> 
 		<h2 style="color: green; font-weight:bold;">GeeksforGeeks</h2> 
 		</li> 
 		<%} %>
@@ -71,7 +116,7 @@ if(user!=null){ %>
   <div class="sto_down">
       <span>
           <a href="#"><i class="fa-solid fa-video fa-lg" style="color:crimson;"></i>Live video</a>
-          <a href="#"><i class="fa-solid fa-images fa-lg" style="color: #41a464;"></i>Photo/video</a>
+          <a href="Makepost.jsp"><i class="fa-solid fa-images fa-lg" style="color: #41a464;"></i>Photo/video</a>
           <a href="#"><i class="fa-regular fa-face-grin-wide fa-lg" style="color: #FFD43B;"></i>Feeling/activity</a>
         </span>
     </div>
